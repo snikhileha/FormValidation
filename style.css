@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    min-height: 100vh;
+
+    background: url(https://th.bing.com/th/id/R.14bbb380fd30ab1df1eec53f85eddd0d?rik=f0OwHHIdc6XxYQ&riu=http%3a%2f%2fmarisazim.weebly.com%2fuploads%2f1%2f5%2f1%2f4%2f15149086%2f6750616_orig.jpg%3f0&ehk=x7Etu4LmF67Doj7QAJqLzvmTseAngfCyXkySz0fNo5c%3d&risl=&pid=ImgRaw&r=0);
+     background-size: cover;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center; 
+     
+}
+
+.container{
+    
+    position: relative;    
+    background-color: rgba(108, 160, 239, 0.5);
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px #0000001a;    
+}
+
+@media(max-width:584px ){
+
+ 
+  .container{
+    
+    position: relative;    
+    background-color: rgba(108, 160, 239, 0.5);
+    width: 90%;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px #0000001a;    
+}
+  
+  body{
+      display: flex;
+      flex: auto;
+      justify-content: flex-start;
+    }
+    #heading{
+      font-size: medium;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 900;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: oblique;
+    }
+    label {
+      font-weight: 500;
+    }
+
+  }
