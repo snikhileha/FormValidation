@@ -29,7 +29,7 @@ goodname.addEventListener('blur',()=>{
         validGoodname = false;
 
     }
-    console.log("the name is : "+validGoodname);
+   // console.log("the name is : "+validGoodname);
 })
    address.addEventListener('blur',()=>{
     let regex = /[a-zA-Z0-9_\s\.\-]{1,100}$/;
@@ -44,7 +44,7 @@ goodname.addEventListener('blur',()=>{
         validAddress = false;
 
     }
-    console.log("address is : "+validAddress);
+   // console.log("address is : "+validAddress);
 })
 email.addEventListener('blur',()=>{
     let regex = /^[0-9a-zA-Z_\.\-]+[@][a-z]+[\.][a-z]{2,3}$/
@@ -59,7 +59,7 @@ email.addEventListener('blur',()=>{
         email.classList.add('is-invalid');
         validEmail = false;
     }
-    console.log("email id is :"+validEmail);
+    //console.log("email id is :"+validEmail);
 })
 phone.addEventListener('blur',()=>{
     let regex= /^[0-9]{10}$/;
@@ -74,7 +74,7 @@ phone.addEventListener('blur',()=>{
         phone.classList.add('is-invalid');
         validphone = false;
     }
-    console.log("email id is :"+validphone);
+    
 })
 
 dob.addEventListener('blur',()=>{
@@ -92,7 +92,7 @@ dob.addEventListener('blur',()=>{
         dob.classList.add('is-invalid');
         validDOB = false;
     }
-    console.log("email id is :"+validDOB);
+   // console.log("email id is :"+validDOB);
 })
 
 
