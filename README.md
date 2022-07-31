@@ -13,7 +13,6 @@ This page is responsive so you can access it through your mobile.
 
 - Bootstrap for validation & success or error message.
 - Regular expression for validation.
-- Moment.js library for date validation.
 - Responsive webpage.
 - Used API call for fetching data.
 
@@ -40,7 +39,7 @@ This page is responsive so you can access it through your mobile.
      $('#failure').hide();
      $('#success').hide();
 
- - ### Validate Name , Address , Email Id & Phone No. 
+ - ### Validate Name , Address , Email Id , Dob & Phone No. 
      By using regular expression it validates input fields.
 
    Name must be long upto 20 character & it not contain no.
@@ -60,6 +59,44 @@ This page is responsive so you can access it through your mobile.
     }
     
     })
+    
+Date of birth follows yyyy-mm-dd format .By using set attribute max ,future date is disable.  
+    
+ #   
+     
+     const dob = document.getElementById("dob");
+     let validDOB = false;
+     dob.addEventListener('blur',()=>{
+     let regex = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/
+     let str3 = dob.value;
+    
+     if(regex.test(str3) ){
+         dob.classList.remove('is-invalid');
+        validDOB = true;
+
+     }else{
+         dob.classList.add('is-invalid');
+         validDOB = false;
+     }
+   
+     })
+     dob.addEventListener('focus',()=>{
+    let date = new Date();
+    let d  =date.getDate();
+    let m = date.getMonth()+1;
+    let y = date.getFullYear();
+    if(m<10){
+        m = "0" + m;
+    }
+    if(d<10){
+        d = "0" + d;
+    }
+    let today=y + "-"+ m + "-" + d;
+    document.getElementById("dob").setAttribute("max",today);
+   
+   
+    })
+
 
  Address includes all character,capital & small any no, symbol
  upto 100 character 
@@ -117,26 +154,9 @@ This page is responsive so you can access it through your mobile.
     console.log("email id is :"+validphone);
     })
 
-  - ### Validate date by using moment.js library.
-#
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" ></script> 
+ 
+
     
-    dob.addEventListener('blur',()=>{
-    let regex = /^([0-9]{1,2})-([0-9]{1,2})-([0-9]{4})$/
-    let str3 = dob.value;
-    let result=moment(`${str3}`,'MM-DD-YYYY',true).isValid();
-    if(regex.test(str3) && result == true ){
-        
-    // console.log("Your DOB Is Valid");
-    dob.classList.remove('is-invalid');
-    validDOB = true;
-
-    }else{
-    // console.log("Your DOB Is Not Valid");
-    dob.classList.add('is-invalid');
-    validDOB = false;
-    }   
-
   - ### API call & Validate function
         
   # 
