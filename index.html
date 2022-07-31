@@ -11,6 +11,9 @@
 </head>
 <body>
     <div>
+
+                          <!-- Success or Error Message -->
+
   <div id="success" class="alert alert-success alert-dismissible show fade " role="alert">
         <strong>Success!</strong>  Your form has been successfully submitted.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
@@ -28,53 +31,52 @@
     
      
      <form id="form" name="form" >
-        <label for="name">Name</label> <br>
-        <input type="text" name="name" class=" form-control is-invalid"
+
+       <div class="from-group"> <label for="name">Name*</label> <br>
+        <input type="text" name="name" required class=" form-control"
          id="name" placeholder="Enter your name here">
-         <div class="invalid-feedback" style="color: red;"> Your name must be
-             2-20 characters long & not contain number</div>
+         <div class="invalid-feedback" style="color: red;"> First letter must be 
+          capitalised & name should not contain any number</div></div>
         <br>
 
-        <label for="address">Address</label><br>
-        <textarea class="form-control is-invalid" placeholder="Enter Your Address here" 
+        <div class="from-group"> <label for="address">Address*</label><br>
+        <textarea class="form-control" required placeholder="Enter Your Address here" 
          id="address" rows="2" minlength="2" maxlength="100" ></textarea>
          <div class="invalid-feedback" style="color: red;">
-            Address can be mention upto 100 characters </div><br>
+            Address can be mention upto 100 characters</div> </div><br>
        
-            <label for="phoneNo">Phone No</label> <br>
-             <input type="text" name="phoneNo" class=" form-control is-invalid" id="phoneNo"
+            <div class="from-group"> <label for="phoneNo">Phone No*</label> <br>
+             <input type="text" required name="phoneNo" required class=" form-control" id="phoneNo"
         placeholder="Enter Your Phone No here">
         <div class="invalid-feedback" style="color: red;"> Your phone number must contain 10 digit only
-            </div><br>
+        </div> </div><br>
 
-            <label for="dob">DOB</label> <br> 
-        <input type="text" name="dob" class=" form-control is-invalid"  id="dob"
+          <div class="from-group">  <label for="dob">DOB*</label> <br> 
+        <input type="date" name="dob"  required class=" form-control"  id="dob"
         placeholder="Select Your DOB">
         <div class="invalid-feedback" style="color: red;">
-             Your date of birth  must contain MM-DD-YYYY format.
-        </div><br>
+             Select Your date of birth.
+        </div></div><br>
 
 
-        <label for="email">Email Address</label> <br> 
-        <input type="text" class=" form-control is-invalid"  name="email" id="email"
+        <div class="from-group"> <label for="email">Email Address*</label> <br> 
+        <input type="email" class=" form-control" required name="email" id="email"
         placeholder="Enter Your Email Id here">
         <div class="invalid-feedback" style="color: red;">
            It must be in examle123@gmail.com format
-        </div><br><br>
+        </div></div><br><br>
 
           
-        <!-- <h6>Please Select the course that you are interested in</h6> -->
+      
         <h6>Please Select the course that you are interested in</h6><br>
         <div class="courseOffer" id="checkBox">
-          <!-- <select id="multi-select" multiple> -->
+          
             <input type="checkbox" name="course" value="C Programs">C Programs<br>
             <input type="checkbox" name="course" value="Fundamental of Computers">Fundamental of Computer<br>
             <input type="checkbox" name="course" value="Microsoft Office">Microsoft Office<br>
             <input type="checkbox" name="course" value="Web Design">Web Design<br>
             <input type="checkbox" name="course" value="Tally ERP9">Tally ERP9<br>
-            <input type="checkbox" name="course" value="ALL">All of the above<br>
-            <input type="checkbox" name="course" value="NONE">None of the above<br>
-          </select><br>
+                      <br>
          
         </div><br>
 
@@ -91,6 +93,6 @@ crossorigin="anonymous"></script>
      crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
   <script src="./index.js" ></script> 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" ></script> 
+  
 </body>
 </html>
