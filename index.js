@@ -6,7 +6,7 @@
  const goodname = document.getElementById('name');
  let validGoodname = false;
 goodname.addEventListener('blur',()=>{
-    let regex = /[A-Z][a-zA-Z\s]{1,20}$/;
+    let regex = /^[A-Z][a-zA-Z\s]{1,20}$/;
     let str = goodname.value;
     let str2 = str.trim();
     if(regex.test(str2)){
